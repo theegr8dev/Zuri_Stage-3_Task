@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta title="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+
+<body>
+    <header class="header">
+        <!-- <img src="https://hng.tech/img/brand-logo.png" alt="" /> -->
+        
+        <div class="container">
+            <div class="user-img_container">
+                <img src="{% static 'user.jpg' %}" alt="" class="user-img">
+            </div>
+
+            <div class="text-content">
+            </div>
+        </div>
+    </header>
+    <main class='main-section'>
+        <div class='main-box'>
+            <sectin class='main'>
+                <h1 class='title'>Alabi Khalid</h1>
+                <p class='occupation'>Backend Developer</p>
+                <section class='main-content'>
+                    <p>Email : alabikahlid.12@gmail.com</p>
+                    <p>Phone : (+234) 90 3279 1865</p>
+                    <p>Lagso, Nigeria</p>
+                    <span>
+                        <a href=" https://github.com/DeanSft-dev">Github</a> |
+                        <a href="https://twitter.com/VS_deen">Twitter</a> |
+                        <a href="https://www.linkedin.com/in/khalid-alabi-695b86213/">Linkedin</a>
+                    </span>
+                </section>
+
+                <section class='about'>
+                    <h1 class='title'>About</h1>
+
+                    <div>
+                        <p class='about-text'>
+                            I am a software engineer from NIIT, SURULERE <br>
+                            I have passion in learning new things and having <br>
+                            more experience in the field with passion of building <br>
+                            APIs and scalable applictions. I have also work with <br>
+                            teams and I'm also looking forward working with more teams.
+                            <br>
+                        </p>
+                    </div>
+                </section>
+
+                <section class='skills'>
+                    <h1 class="title">Skills</h1>
+                    <ul skill-list>
+                        <li>Microsoft Office</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>Django</li>
+                    </ul>
+                </section>
+
+                <section class='projects'>
+                    <h1 class='title'>Education</h1>
+                    <ul class='list-unstyled-2'>
+                        <li>
+                            <a target="_blank">National Institue of Information Technonology(NIIT)</a>
+                            <br>
+                            <small>HND Software Developer</small>
+                            <p style='font-size: 18px;'>
+                                Till Date
+                            </p>
+                        </li>
+                        <br>
+
+                        <li>
+                            <a target="_blank">Waslat College</a>
+                            <br>
+                            <small>High School Diploma</small>
+                            <p style='font-size: 18px;'>
+                                August 2020
+                            </p>
+                        </li>
+                </section>
+
+                <section class='contact'>
+                    <h1 class='title'>Contact Me</h1>
+                    <form id="form" method="post" class="topBefore">
+                    {% csrf_token %}
+                        <input name='name' id="name" type="text" placeholder="NAME" required>
+                        <input name='email' id="email" type="text" placeholder="E-MAIL" required>
+                        <textarea name='message' id="message" type="text" placeholder="MESSAGE" required></textarea>
+                        <input id="submit" type="submit" value="GO!">
+
+                    </form>
+                    <img src="https://hng.tech/img/brand-logo.png" alt="" />
+                </section>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>
